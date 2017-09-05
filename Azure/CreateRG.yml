@@ -5,7 +5,7 @@
   tasks:
   - name: Create a resource group
     azure_rm_resourcegroup:
-      name: Ansible-Workshop-Testing
+      name: Ansible-Workshop-Test
       location: westus
       tags:
           testing: testing
