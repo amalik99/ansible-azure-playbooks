@@ -57,8 +57,8 @@
       storage_account: testaccount156489
       storage_container: testvm001
       storage_blob: testvm001.vhd
-      admin_username: admin
-      admin_password: Password!
+      admin_username: ansibleadmin
+      admin_password: Password!123
       network_interfaces: testnic001
       image:
         offer: CentOS
