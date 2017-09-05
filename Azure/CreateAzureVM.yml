@@ -28,16 +28,16 @@
         name: publicip001
 
     - name: Create security group that allows SSH
-        azure_rm_securitygroup:
-          resource_group: Ansible-Workshop-Test
-          name: secgroup001
-          rules:
-            - name: SSH
-              protocol: Tcp
-              destination_port_range: 22
-              access: Allow
-              priority: 101
-              direction: Inbound
+      azure_rm_securitygroup:
+        resource_group: Ansible-Workshop-Test
+        name: secgroup001
+        rules:
+          - name: SSH
+            protocol: Tcp
+            destination_port_range: 22
+            access: Allow
+            priority: 101
+            direction: Inbound
 
     - name: Create NIC
       azure_rm_networkinterface:
