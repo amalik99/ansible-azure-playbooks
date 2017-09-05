@@ -1,5 +1,6 @@
----
-- hosts: all
+- name: CREATE VM Manually
+  hosts: all
+  gather_facts: true
   tasks:
     - name: Create storage account
       azure_rm_storageaccount:
