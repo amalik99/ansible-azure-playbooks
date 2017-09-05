@@ -1,4 +1,4 @@
----
+- name: CREATE RG Playbook
   hosts: all
   gather_facts: true
   
