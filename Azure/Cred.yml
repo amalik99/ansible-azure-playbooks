@@ -1,0 +1,21 @@
+---
+- hosts: all
+  tasks:
+  - copy:
+     src: /etc/ansible/credentials
+     dest: /root/.azure/credentials
+  - name: store User ID
+    replace:
+     path: /root/.azure/credentials
+     regexp: 'user_id'
+     replace: "{{user_id}}"
+  - name: store Password
+    replace:
+     path: /root/.azure/credentials
+     regexp: 'passwd'
+     replace: "{{password}}"
+  - name: store Subscription ID
+    replace:
+     path: /root/.azure/credentials
+     regexp: 'subs_id'
+     replace: "{{subscription_id}}"

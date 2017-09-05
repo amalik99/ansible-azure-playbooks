@@ -1,0 +1,14 @@
+---
+- hosts: all
+  tasks:
+  - name: APACHE | Installing APACHE
+    yum:
+     name: httpd
+     state: latest
+  - name: Copying the demo file
+    template: src=/etc/ansible/index.html dest=/var/www/html
+  - name: insert firewalld rule for httpd
+    firewalld: port=80/tcp permanent=true state=enabled immediate=yes
+    ignore_errors: yes
+  - name: (Enable it on System Boot)
+    service: name=httpd enabled=yes state=started

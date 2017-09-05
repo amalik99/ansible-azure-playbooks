@@ -1,2 +1,2 @@
-# ansible-azure-playbooks
-Playbooks for Creating Azure Resources
+# Spektra Ansible Labs
+This is repository for examples to be demonstrated in Spektra Trainings
